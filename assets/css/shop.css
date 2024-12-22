@@ -1,0 +1,176 @@
+/* assets/css/shop.css */
+
+/* พื้นหลังที่เคลื่อนไหวอย่างมีชีวิตชีวา */
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(45deg, #ff61a6, #6a11cb, #2575fc);
+  background-size: 300% 300%;
+  animation: gradientAnimation 5s ease infinite;
+  font-family: "Courier New", Courier, monospace;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* คอนเทนเนอร์ของ shop */
+.shop-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* สไตล์ของชื่อ shop */
+.shop-title {
+  font-size: 36px;
+  color: #fff;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+
+/* ฟอร์มค้นหาสินค้า */
+.search-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.search-input {
+  width: 60%;
+  padding: 12px;
+  border-radius: 20px;
+  font-size: 16px;
+  outline: none;
+  background: linear-gradient(45deg, #ff61a6, #6a11cb);
+  background-clip: padding-box;
+  color: white;
+  transition: all 0.3s ease-in-out;
+}
+
+.search-input:focus {
+  border-color: #2575fc;
+  box-shadow: 0 0 10px rgba(37, 117, 252, 0.8);
+  transform: scale(1.05); /* ขยายขนาดเมื่อโฟกัส */
+}
+
+.search-button {
+  background-color: #2575fc; /* ปุ่มค้นหาสีฟ้า */
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+  margin-left: 10px;
+}
+
+.search-button:hover {
+  background-color: #6a11cb; /* สีม่วงเมื่อ hover */
+}
+
+/* การ์ดสินค้า */
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 30px;
+  width: 100%;
+}
+
+.product-card {
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
+
+.product-image img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover .product-image img {
+  transform: scale(1.05); /* เพิ่ม effect เมื่อ hover */
+}
+
+.product-info {
+  padding: 20px;
+  text-align: center;
+}
+
+.product-info h3 {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.product-info p {
+  color: #777;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.price {
+  color: #2575fc;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* ปุ่มเพิ่มสินค้าลงในตะกร้า */
+.add-to-cart {
+  display: inline-block;
+  background-color: #28a745; /* ปุ่ม Add to Cart สีเขียว */
+  color: white;
+  padding: 10px 20px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.add-to-cart:hover {
+  background-color: #218838; /* สีเขียวเข้มเมื่อ hover */
+}
+
+/* ข้อความเมื่อไม่มีสินค้า */
+.no-products {
+  text-align: center;
+  font-size: 18px;
+  color: #888;
+  animation: fadeIn 1s ease-out;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

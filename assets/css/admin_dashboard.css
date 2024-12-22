@@ -1,0 +1,161 @@
+/* พื้นหลังที่เคลื่อนไหวอย่างมีชีวิตชีวา */
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(45deg, #ff61a6, #6a11cb, #2575fc);
+  background-size: 300% 300%;
+  animation: gradientAnimation 5s ease infinite;
+  font-family: "Courier New", Courier, monospace;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* การตั้งค่า Dashboard Container */
+.dashboard-container {
+  width: 80%;
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  backdrop-filter: blur(10px);
+  animation: scaleUp 1.2s ease-out;
+}
+
+/* แอนิเมชันของ Dashboard */
+@keyframes scaleUp {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* ชื่อของ Dashboard */
+.dashboard-title {
+  font-size: 2.5em;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* ปุ่ม Add New Product */
+.add-product-btn {
+  display: inline-block;
+  padding: 12px 20px;
+  background-color: #4caf50;
+  color: white;
+  border-radius: 25px;
+  text-decoration: none;
+  font-size: 1.2em;
+  margin-bottom: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.add-product-btn:hover {
+  background-color: #45a049;
+}
+
+/* ตารางสินค้า */
+.product-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.product-table th,
+.product-table td {
+  padding: 15px;
+  text-align: center;
+  border: 1px solid #ddd;
+}
+
+.product-table th {
+  background-color: #4caf50;
+  color: white;
+  font-weight: bold;
+}
+
+.product-table td {
+  background-color: #fff;
+}
+
+.product-table tr:hover {
+  background-color: #f5f5f5;
+}
+
+/* ปุ่มแก้ไขและลบ */
+.edit-btn,
+.delete-btn {
+  display: inline-block;
+  padding: 8px 15px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-size: 1em;
+  color: white;
+  transition: background-color 0.3s ease;
+  margin-right: 10px;
+}
+
+.edit-btn {
+  background-color: #ffa500;
+}
+
+.edit-btn:hover {
+  background-color: #ff8c00;
+}
+
+.delete-btn {
+  background-color: #e74c3c;
+}
+
+.delete-btn:hover {
+  background-color: #c0392b;
+}
+
+.delete-btn:active {
+  background-color: #b73c2b;
+}
+
+/* ข้อความผิดพลาด */
+.error-message {
+  color: #ff61a6;
+  font-weight: bold;
+  font-size: 1.1em;
+  margin-top: 15px;
+  animation: fadeIn 1s ease-out;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* การตั้งค่าภายในส่วนแสดงผลของปุ่ม */
+.btn:focus {
+  outline: none;
+}

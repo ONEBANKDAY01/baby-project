@@ -1,0 +1,92 @@
+/* Container ของหน้า Top-up */
+.topup-container {
+  width: 80%;
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 40px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* หัวข้อ */
+.topup-container h1 {
+  font-size: 2.5em;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* ข้อความแสดงยอดเงิน */
+.topup-container p {
+  font-size: 1.2em;
+  color: #333;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* ฟอร์ม */
+.topup-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* กลุ่ม input */
+.input-group {
+  display: flex;
+  flex-direction: column;
+}
+
+/* เลเบล */
+.input-group label {
+  font-weight: bold;
+  font-size: 1.1em;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+/* input */
+.input-group input {
+  padding: 10px;
+  font-size: 1.2em;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  transition: border 0.3s;
+}
+
+/* เมื่อ focus */
+.input-group input:focus {
+  border-color: #2575fc;
+  box-shadow: 0 0 10px rgba(37, 117, 252, 0.8);
+}
+
+/* ปุ่ม */
+button.btn {
+  padding: 12px 20px;
+  font-size: 1.2em;
+  color: #fff;
+  background: #2575fc;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+/* ปุ่มเมื่อ hover */
+button.btn:hover {
+  background: #6a11cb;
+}
+
+/* ข้อความแจ้งเตือน */
+.success-message {
+  color: green;
+  font-weight: bold;
+  text-align: center;
+}
+
+.error-message {
+  color: red;
+  font-weight: bold;
+  text-align: center;
+}
